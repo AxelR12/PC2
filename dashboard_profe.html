@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Profesor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Mis Cursos</h2>
+        <ul>
+            <li><a href="#" onclick="mostrarCurso('curso1')">Matemáticas Avanzadas</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso2')">Programación Web</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso3')">Introducción a la Física</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso4')">Biología Celular</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso5')">Historia del Arte</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso6')">Economía Internacional</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso7')">Derecho Constitucional</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso8')">Química Orgánica</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso9')">Literatura Mundial</a></li>
+            <li><a href="#" onclick="mostrarCurso('curso10')">Psicología del Desarrollo</a></li>
+        </ul>
+        <div id="descripcionCurso">
+            <!-- Aquí se mostrará la descripción del curso seleccionado -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function mostrarCurso(curso) {
+            var descripcion = '';
+            switch (curso) {
+                case 'curso1':
+                    descripcion = 'Curso de Matemáticas Avanzadas: En este curso se cubrirán temas como cálculo diferencial e integral, álgebra lineal, geometría analítica y ecuaciones diferenciales. Los estudiantes desarrollarán habilidades avanzadas en resolución de problemas matemáticos y aplicaciones prácticas.';
+                    break;
+                case 'curso2':
+                    descripcion = 'Curso de Programación Web: Este curso proporciona una introducción completa al desarrollo web, incluyendo HTML, CSS, JavaScript y tecnologías de desarrollo web modernas como React y Node.js. Los estudiantes aprenderán a construir sitios web interactivos y aplicaciones web dinámicas.';
+                    break;
+                case 'curso3':
+                    descripcion = 'Curso de Introducción a la Física: A lo largo de este curso, los estudiantes serán introducidos a los conceptos fundamentales de la física, incluyendo mecánica, termodinámica, electricidad y magnetismo. Se enfatizará en la comprensión de los principios físicos y su aplicación a situaciones del mundo real.';
+                    break;
+                case 'curso4':
+                    descripcion = 'Curso de Biología Celular: En este curso se explorarán los aspectos fundamentales de la biología celular, incluyendo la estructura y función de las células, procesos de división celular, transporte celular y la organización de los componentes celulares. Se estudiarán también temas avanzados como la genética molecular y la biología del desarrollo.';
+                    break;
+                case 'curso5':
+                    descripcion = 'Curso de Historia del Arte: A lo largo de este curso, se examinarán las principales corrientes artísticas y los movimientos artísticos más importantes desde la prehistoria hasta la actualidad. Los estudiantes analizarán obras de arte significativas y aprenderán a interpretar su contexto histórico y cultural.';
+                    break;
+                case 'curso6':
+                    descripcion = 'Curso de Economía Internacional: Este curso aborda temas clave en el ámbito de la economía global, incluyendo teorías del comercio internacional, políticas comerciales, finanzas internacionales y organizaciones económicas internacionales. Se explorarán también los desafíos y oportunidades en un mundo cada vez más interconectado.';
+                    break;
+                case 'curso7':
+                    descripcion = 'Curso de Derecho Constitucional: En este curso se estudiarán los principios y conceptos fundamentales del derecho constitucional, incluyendo la estructura y funciones del Estado, los derechos y libertades fundamentales, y la interpretación y aplicación de la constitución. Se analizarán también casos y jurisprudencia relevantes.';
+                    break;
+                case 'curso8':
+                    descripcion = 'Curso de Química Orgánica: A lo largo de este curso, se explorarán los principios de la química orgánica, incluyendo la estructura y reactividad de los compuestos orgánicos, mecanismos de reacción, y síntesis orgánica. Los estudiantes aprenderán a aplicar estos conceptos en la síntesis de compuestos orgánicos complejos.';
+                    break;
+                case 'curso9':
+                    descripcion = 'Curso de Literatura Mundial: En este curso se analizarán obras literarias significativas de diferentes épocas y culturas alrededor del mundo. Los estudiantes explorarán temas universales y aprenderán a apreciar la diversidad de la literatura mundial.';
+                    break;
+                case 'curso10':
+                    descripcion = 'Curso de Psicología del Desarrollo: A lo largo de este curso, se estudiarán los procesos de desarrollo humano desde la infancia hasta la edad adulta, incluyendo aspectos cognitivos, emocionales, sociales y físicos. Se analizarán también los factores que influyen en el desarrollo y las teorías psicológicas relevantes.';
+                    break;
+                default:
+                    descripcion = 'No se encontró información para este curso.';
+            }
+            document.getElementById('descripcionCurso').innerHTML = descripcion;
+        }
+    </script>
+</body>
+</html>
+
+
